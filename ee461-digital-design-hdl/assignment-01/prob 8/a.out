@@ -1,0 +1,41 @@
+#! /usr/share/iverilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_6)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x11c9cf0 .scope module, "testInteger" "testInteger" 2 1;
+ .timescale 0 0;
+L_0x11fcdc0 .functor AND 1, C4<1>, C4<1>, C4<1>, C4<1>;
+v0x11ca4f0_0 .var/i "i", 31 0;
+v0x11fc9a0_0 .net "pwrGood", 0 0, L_0x11fcdc0; 1 drivers
+v0x11fca40_0 .net "pwrOn", 0 0, C4<1>; 1 drivers
+v0x11fcae0_0 .net "pwrStable", 0 0, C4<1>; 1 drivers
+v0x11fcb90_0 .var/real "r", 0 0;
+v0x11fcc30_0 .var "t", 63 0;
+    .scope S_0x11c9cf0;
+T_0 ;
+    %loadi/wr 4, 2071247978, 4072; load=123.456
+    %loadi/wr 5, 2080375, 4050; load=123.456
+    %add/wr 4, 5;
+    %cvt/vr 8, 4, 32;
+    %set/v v0x11ca4f0_0, 8, 32;
+    %loadi/wr 4, 2071247978, 4072; load=123.456
+    %loadi/wr 5, 2080375, 4050; load=123.456
+    %add/wr 4, 5;
+    %set/wr v0x11fcb90_0, 4;
+    %loadi/wr 4, 2071247978, 4072; load=123.456
+    %loadi/wr 5, 2080375, 4050; load=123.456
+    %add/wr 4, 5;
+    %cvt/vr 8, 4, 64;
+    %set/v v0x11fcc30_0, 8, 64;
+    %vpi_call 2 18 "$display", "i=%0g", v0x11ca4f0_0, " t=%6.2f", v0x11fcc30_0, " r=%f", v0x11fcb90_0;
+    %delay 10, 0;
+    %vpi_call 2 22 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "design.sv";

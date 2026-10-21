@@ -1,0 +1,153 @@
+#! /usr/share/iverilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_6)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x909210 .scope module, "tb" "tb" 2 3;
+ .timescale 0 0;
+v0x930f00_0 .var "a_r", 3 0;
+v0x930fa0_0 .var "b_r", 3 0;
+v0x931050_0 .var "c_r", 0 0;
+v0x931120_0 .net "co_w", 0 0, L_0x933770; 1 drivers
+RS_0x7fb53f0639a8 .resolv tri, L_0x931eb0, L_0x932a30, L_0x933640, L_0x934100;
+v0x9311f0_0 .net8 "sum_w", 3 0, RS_0x7fb53f0639a8; 4 drivers
+S_0x901750 .scope module, "uAdder_hier0" "adder_hier" 2 9, 3 3, S_0x909210;
+ .timescale 0 0;
+v0x9309f0_0 .net "c1_w", 0 0, L_0x931270; 1 drivers
+v0x930a90_0 .net "c2_w", 0 0, L_0x931ff0; 1 drivers
+v0x930b60_0 .net "c3_w", 0 0, L_0x932b60; 1 drivers
+v0x930c30_0 .alias "carry_o", 0 0, v0x931120_0;
+v0x930cb0_0 .net "ci_i", 0 0, v0x931050_0; 1 drivers
+v0x930d30_0 .net "r1_i", 3 0, v0x930f00_0; 1 drivers
+v0x930db0_0 .net "r2_i", 3 0, v0x930fa0_0; 1 drivers
+v0x930e30_0 .alias "result_o", 3 0, v0x9311f0_0;
+L_0x931c30 .part v0x930f00_0, 0, 1;
+L_0x931d70 .part v0x930fa0_0, 0, 1;
+L_0x931eb0 .part/pv L_0x931340, 0, 1, 4;
+L_0x932850 .part v0x930f00_0, 1, 1;
+L_0x932940 .part v0x930fa0_0, 1, 1;
+L_0x932a30 .part/pv L_0x932090, 1, 1, 4;
+L_0x933390 .part v0x930f00_0, 2, 1;
+L_0x933510 .part v0x930fa0_0, 2, 1;
+L_0x933640 .part/pv L_0x932c00, 2, 1, 4;
+L_0x933f70 .part v0x930f00_0, 3, 1;
+L_0x934060 .part v0x930fa0_0, 3, 1;
+L_0x934100 .part/pv L_0x933810, 3, 1, 4;
+S_0x930080 .scope module, "u0" "addbit" 3 29, 4 1, S_0x901750;
+ .timescale 0 0;
+v0x930170_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0x930230_0 .net *"_s11", 1 0, L_0x931770; 1 drivers
+v0x9302d0_0 .net *"_s13", 1 0, L_0x931980; 1 drivers
+v0x930370_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0x930420_0 .net *"_s17", 1 0, L_0x931af0; 1 drivers
+v0x9304c0_0 .net *"_s3", 1 0, L_0x931460; 1 drivers
+v0x930560_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v0x930600_0 .net *"_s7", 1 0, L_0x9315b0; 1 drivers
+v0x9306a0_0 .net "a", 0 0, L_0x931c30; 1 drivers
+v0x930740_0 .net "b", 0 0, L_0x931d70; 1 drivers
+v0x9307e0_0 .alias "c", 0 0, v0x930cb0_0;
+v0x930880_0 .alias "co", 0 0, v0x9309f0_0;
+v0x930970_0 .net "sum", 0 0, L_0x931340; 1 drivers
+L_0x931270 .part L_0x931af0, 1, 1;
+L_0x931340 .part L_0x931af0, 0, 1;
+L_0x931460 .concat [ 1 1 0 0], L_0x931c30, C4<0>;
+L_0x9315b0 .concat [ 1 1 0 0], L_0x931d70, C4<0>;
+L_0x931770 .arith/sum 2, L_0x931460, L_0x9315b0;
+L_0x931980 .concat [ 1 1 0 0], v0x931050_0, C4<0>;
+L_0x931af0 .arith/sum 2, L_0x931770, L_0x931980;
+S_0x92f710 .scope module, "u1" "addbit" 3 30, 4 1, S_0x901750;
+ .timescale 0 0;
+v0x92f800_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0x92f8c0_0 .net *"_s11", 1 0, L_0x9323e0; 1 drivers
+v0x92f960_0 .net *"_s13", 1 0, L_0x932520; 1 drivers
+v0x92fa00_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0x92fab0_0 .net *"_s17", 1 0, L_0x932710; 1 drivers
+v0x92fb50_0 .net *"_s3", 1 0, L_0x932180; 1 drivers
+v0x92fbf0_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v0x92fc90_0 .net *"_s7", 1 0, L_0x9322b0; 1 drivers
+v0x92fd30_0 .net "a", 0 0, L_0x932850; 1 drivers
+v0x92fdd0_0 .net "b", 0 0, L_0x932940; 1 drivers
+v0x92fe70_0 .alias "c", 0 0, v0x9309f0_0;
+v0x92ff10_0 .alias "co", 0 0, v0x930a90_0;
+v0x930000_0 .net "sum", 0 0, L_0x932090; 1 drivers
+L_0x931ff0 .part L_0x932710, 1, 1;
+L_0x932090 .part L_0x932710, 0, 1;
+L_0x932180 .concat [ 1 1 0 0], L_0x932850, C4<0>;
+L_0x9322b0 .concat [ 1 1 0 0], L_0x932940, C4<0>;
+L_0x9323e0 .arith/sum 2, L_0x932180, L_0x9322b0;
+L_0x932520 .concat [ 1 1 0 0], L_0x931270, C4<0>;
+L_0x932710 .arith/sum 2, L_0x9323e0, L_0x932520;
+S_0x92edd0 .scope module, "u2" "addbit" 3 31, 4 1, S_0x901750;
+ .timescale 0 0;
+v0x92eec0_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0x92ef80_0 .net *"_s11", 1 0, L_0x932fa0; 1 drivers
+v0x92f020_0 .net *"_s13", 1 0, L_0x9330e0; 1 drivers
+v0x92f0c0_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0x92f140_0 .net *"_s17", 1 0, L_0x933250; 1 drivers
+v0x92f1e0_0 .net *"_s3", 1 0, L_0x932cf0; 1 drivers
+v0x92f280_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v0x92f320_0 .net *"_s7", 1 0, L_0x932e20; 1 drivers
+v0x92f3c0_0 .net "a", 0 0, L_0x933390; 1 drivers
+v0x92f460_0 .net "b", 0 0, L_0x933510; 1 drivers
+v0x92f500_0 .alias "c", 0 0, v0x930a90_0;
+v0x92f5a0_0 .alias "co", 0 0, v0x930b60_0;
+v0x92f690_0 .net "sum", 0 0, L_0x932c00; 1 drivers
+L_0x932b60 .part L_0x933250, 1, 1;
+L_0x932c00 .part L_0x933250, 0, 1;
+L_0x932cf0 .concat [ 1 1 0 0], L_0x933390, C4<0>;
+L_0x932e20 .concat [ 1 1 0 0], L_0x933510, C4<0>;
+L_0x932fa0 .arith/sum 2, L_0x932cf0, L_0x932e20;
+L_0x9330e0 .concat [ 1 1 0 0], L_0x931ff0, C4<0>;
+L_0x933250 .arith/sum 2, L_0x932fa0, L_0x9330e0;
+S_0x901990 .scope module, "u3" "addbit" 3 32, 4 1, S_0x901750;
+ .timescale 0 0;
+v0x905bf0_0 .net *"_s10", 0 0, C4<0>; 1 drivers
+v0x92e4e0_0 .net *"_s11", 1 0, L_0x933ad0; 1 drivers
+v0x92e580_0 .net *"_s13", 1 0, L_0x933c10; 1 drivers
+v0x92e620_0 .net *"_s16", 0 0, C4<0>; 1 drivers
+v0x92e6d0_0 .net *"_s17", 1 0, L_0x933dc0; 1 drivers
+v0x92e770_0 .net *"_s3", 1 0, L_0x933900; 1 drivers
+v0x92e850_0 .net *"_s6", 0 0, C4<0>; 1 drivers
+v0x92e8f0_0 .net *"_s7", 1 0, L_0x9339f0; 1 drivers
+v0x92e9e0_0 .net "a", 0 0, L_0x933f70; 1 drivers
+v0x92ea80_0 .net "b", 0 0, L_0x934060; 1 drivers
+v0x92eb80_0 .alias "c", 0 0, v0x930b60_0;
+v0x92ec20_0 .alias "co", 0 0, v0x931120_0;
+v0x92ed30_0 .net "sum", 0 0, L_0x933810; 1 drivers
+L_0x933770 .part L_0x933dc0, 1, 1;
+L_0x933810 .part L_0x933dc0, 0, 1;
+L_0x933900 .concat [ 1 1 0 0], L_0x933f70, C4<0>;
+L_0x9339f0 .concat [ 1 1 0 0], L_0x934060, C4<0>;
+L_0x933ad0 .arith/sum 2, L_0x933900, L_0x9339f0;
+L_0x933c10 .concat [ 1 1 0 0], L_0x932b60, C4<0>;
+L_0x933dc0 .arith/sum 2, L_0x933ad0, L_0x933c10;
+    .scope S_0x909210;
+T_0 ;
+    %set/v v0x930f00_0, 0, 4;
+    %set/v v0x930fa0_0, 0, 4;
+    %set/v v0x931050_0, 0, 1;
+    %delay 1, 0;
+    %movi 8, 3, 4;
+    %set/v v0x930f00_0, 8, 4;
+    %movi 8, 2, 4;
+    %set/v v0x930fa0_0, 8, 4;
+    %set/v v0x931050_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 24 "$finish";
+    %end;
+    .thread T_0;
+    .scope S_0x909210;
+T_1 ;
+    %vpi_call 2 30 "$monitor", "%g: a_r=%d, b_r=%d, c_r=%d, sum_w=%d,co_w=%d ", $time, v0x930f00_0, v0x930fa0_0, v0x931050_0, v0x9311f0_0, v0x931120_0;
+    %vpi_call 2 32 "$dumpfile", "test.vcd";
+    %vpi_call 2 33 "$dumpvars", 2'sb01;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "design.sv";
+    "./addbit.v";

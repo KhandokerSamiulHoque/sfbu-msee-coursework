@@ -1,0 +1,81 @@
+$date
+	Sat Feb 18 22:04:26 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! z $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$scope module cmospmos_tb $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' c $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vdd $end
+$var wire 1 * x1 $end
+$var wire 1 + x2 $end
+$var wire 1 , x3 $end
+$var wire 1 ! z $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1,
+z+
+1*
+1)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#5
+1$
+0+
+1'
+#10
+0$
+0'
+1#
+z*
+1&
+#15
+1$
+1'
+#20
+0$
+z+
+0'
+0#
+1*
+0&
+1"
+1,
+1%
+#25
+1!
+1$
+0,
+0+
+1'
+#30
+0$
+0'
+1#
+z*
+1&
+#35
+1$
+1'
+#40
