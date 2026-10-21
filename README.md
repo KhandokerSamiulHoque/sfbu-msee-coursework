@@ -5,8 +5,8 @@ Labs and assignments from my Master of Science in Electrical Engineering at San 
 | Folder | Course | What is inside |
 |---|---|---|
 | [`ee461-digital-design-hdl/`](ee461-digital-design-hdl/) | EE461 Digital Design and HDL | SystemVerilog designs with testbenches: full adders, D flip-flops (sync and async), every basic gate in both `assign` and `always` style, lab reports |
-| [`ee488-computer-architecture/`](ee488-computer-architecture/) | EE488 | MIPS assembly assignments (reports with code) |
-| [`ce450-raspberry-pi-python/`](ce450-raspberry-pi-python/) | CE450 | Raspberry Pi hardware labs in Python: GPIO, 74HC595 seven-segment display, I2C LCD; C and Python exercises |
+| [`ee488-computer-architecture/`](ee488-computer-architecture/) | EE488 Computer Architecture | MIPS assembly assignments (reports with code) |
+| [`ce450-raspberry-pi-python/`](ce450-raspberry-pi-python/) | CE450 Embedded Engineering | Raspberry Pi hardware labs in Python: GPIO, 74HC595 seven-segment display, I2C LCD; C and Python exercises |
 | [`business-analytics/`](business-analytics/) | Business analytics project | Time-series visualization of forum page views with pandas, Matplotlib and Seaborn |
 
 ## Running the HDL examples
